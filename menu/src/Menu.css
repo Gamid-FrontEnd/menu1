@@ -12,8 +12,24 @@
    border-right: 5px solid #999B00;
 }
 
+.cross {
+  width: 30px;
+  height: 30px;
+  background: url('img/close.png') 0 0;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.cross:active {
+  width: 28px;
+  height: 28px;
+  top: 6px;
+  right: 6px;
+}
+
 #flyoutMenu.hide {
-   transform: translate3d(–20vw, 0, 0);
+   transform: translateX(-21vw);
 }
 
 #flyoutMenu.show {

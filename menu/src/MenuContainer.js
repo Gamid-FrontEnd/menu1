@@ -1,8 +1,8 @@
-import  React, {Component} from 'react';
+import React, {Component} from 'react';
 import MenuButton from './MenuButton.js';
 import Menu from './Menu.js';
 
-class MenuContainer extends React.Component {
+class MenuContainer extends Component {
   constructor(props) {
     super(props);
 
@@ -14,19 +14,19 @@ class MenuContainer extends React.Component {
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
-
-  toggleMenu() {
-    this.setState({
-      visible: !this.state.visible
-    }); 
-  }
-
   handleMouseDown(e) {
     this.toggleMenu();
 
     console.log("clicked");
     e.stopPropagation();
   }
+
+  toggleMenu() {
+    this.setState({
+      visible: !this.state.visible
+    });
+  }
+
 
   render() {
     return(

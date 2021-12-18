@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import './Menu.css';
+import './img/close.png'
 
-class Menu extends React.Component {
-  render() {
+class Menu extends Component {
+  render () {
     var visibility = "hide";
 
     if (this.props.menuVisibility) {
@@ -10,11 +11,12 @@ class Menu extends React.Component {
     }
 
     return(
-      <div id="flyoutMenu" onMouseDown={this.props.handleMouseDown} className={visibility}>
-        <h2><a href="#">Main</a></h2>
-        <h2><a href="#">About</a></h2>
-        <h2><a href="#">Contact</a></h2>
-        <h2><a href="#">Search</a></h2>
+      <div id="flyoutMenu" className={visibility}>
+        <div className={'cross'} onClick={this.props.handleMouseDown}></div>
+        <h2><a href="#af">Main</a></h2>
+        <h2><a href="#af">About</a></h2>
+        <h2><a href="#a">Contact</a></h2>
+        <h2><a href="#a">Search</a></h2>
       </div>
     );
   }
